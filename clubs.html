@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<!-- Mirrored from upsidethemes.net/demo/seramag/html/index2.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 31 Aug 2017 01:41:20 GMT -->
+<head>
+        <meta charset="utf-8">
+        <title>Clubs</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css" media="all" />
+        <link rel="stylesheet" type="text/css" href="css/font-awesome.css" media="all" />
+        <link rel="stylesheet" type="text/css" href="css/superfish.css" media="all" />
+        <link rel="stylesheet" type="text/css" href="css/megafish.css" /> 
+        <link rel="stylesheet" type="text/css" href="css/jquery.navgoco.css"/>
+        <link rel="stylesheet" type="text/css" href="css/owl.carousel.css" media="all" />
+        <link rel="stylesheet" type="text/css" href="css/owl.theme.css" media="all" />
+        <link rel="stylesheet" type="text/css" href="css/jquery.mCustomScrollbar.css" media="all" />
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <!-- <link type="text/css" rel="stylesheet" href="assets/css/style.css">  -->
+		
+        
+        <script src="js/modernizr.custom.js"></script>
+
+        <!--[if lt IE 9]>
+            <link rel="stylesheet" href="css/ie.css" type="text/css" media="all" />
+        <![endif]-->
+
+        <!--[if IE 9]>
+            <link rel="stylesheet" href="css/ie9.css" type="text/css" media="all" />
+        <![endif]-->
+
+        <!-- Le fav and touch icons -->
+        <link rel="shortcut icon" href="img/favicon.html">
+        <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
+
+    </head>
+    
+<body class="kopa-home-page" ng-app="myApp" ng-controller="myCtrl">
+
+    <div id="div_header"></div>
+    <!-- kopa-page-header -->
+
+    <div id="main-content" style="margin-left:40px;margin-right:40px">
+
+            <div class="main-top" style="margin-top:30px">
+
+                <div class="kopa-ticker">
+                    <span class="ticker-title"><i class="fa fa-angle-double-right"></i>Breaking news</span>
+                    <div class="ticker-wrap">                        
+                        <dl class="ticker-1">
+                            <dt></dt>
+                            <dd><a href="#">This will be for breaking news headlines one...</a></dd>
+                            <dd><a href="#">This will be for breaking news headlines two...</a></dd>
+                            <dd><a href="#">This will be for breaking news headlines three...</a></dd>
+                            <dd><a href="#">This will be for breaking news AND SO ON--AND SO FORTH...</a></dd>
+                        </dl>
+                        <!--ticker-1-->
+                    </div>
+                </div>
+                <!-- kopa-ticker -->
+
+                <div class="social-links style1">
+                    <ul class="clearfix">
+                        <li><a href="#" class="fa fa-facebook"></a></li>
+                        <li><a href="#" class="fa fa-twitter"></a></li>
+                        <li><a href="#" class="fa fa-google-plus"></a></li>
+                        <li><a href="#" class="fa fa-instagram"></a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <!-- main-top -->
+
+            <div class="kopa-breadcrumb">
+                        <div class="wrapper clearfix">
+                            <span itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="">
+                                <a itemprop="url" href="#">
+                                    <span itemprop="title">Home</span>
+                                </a>
+                            </span>
+                            &nbsp;|&nbsp;
+                            <span itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="">
+                                <a itemprop="url" href="#">
+                                    <span itemprop="title">Team</span>
+                                </a>
+                            </span>
+                            &nbsp;|&nbsp;
+                            <span itemtype="http://data-vocabulary.org/Breadcrumb" itemscope="">
+                                <a itemprop="url" class="current-page">
+                                    <span itemprop="title">RYO MIDIACHI</span>
+                                </a>
+                            </span>
+                        </div>
+            </div>
+
+            <div class="row">
+
+                <div class="kopa-main-col">
+
+                    <div class="widget-area-2" style="height:auto;background-color:#F8F8F8 ">
+                        <h4 style="margin-left:40px;padding-top:10px">NTF CLUBS<br/>                        _______________________________________________________________________________________________________________________</h4><br/>
+                        <div class="row" ng-repeat="x in clubs" >
+                            <div class="col-xs-2" style="padding-left:90px">
+                                <h2 ng-cloak><span ng-bind="$index + 1"></span></h2>
+                            </div>
+                            <div class="col-xs-6" style="padding-left:90px">
+                                <h4 ng-cloak><span ng-bind="x.name"></span></h4>
+                            </div>
+                            <div class="col-xs-4 pull-right" style="padding-left:60px">
+                                <button type="button" class="btn btn-lg" style="background-color:green;color:white" ng-click="prepareToView(x)">VIEW PROFILE</button>
+                            </div>
+                            <p >__________________________________________________________________________________________</p>
+                        </div><hr/>
+                    </div>
+                    <div class="kopa-pagination">
+                                    <ul class="clearfix">
+                                        <li><a href="#" class="prev fa fa-chevron-left"></a></li>
+                                        <li><a href="#">Older</a></li>
+                                        <li><span class="current">1</span></li>
+                                        <li><a href="#">2</a></li>
+                                        <li><a href="#">3</a></li>
+                                        <li><a href="#">4</a></li>
+                                        <li><a href="#">5</a></li>
+                                        <li><a href="#">Newer</a></li>
+                                        <li><a href="#" class="next fa fa-chevron-right"></a></li>
+                                    </ul>
+                                </div>
+                    
+
+                </div>
+                <!-- main-col -->
+
+                <div class="sidebar widget-area-11">
+
+                    <div class="widget widget_search">
+                        <h3 class="widget-title style3"><span class="fa fa-search"></span>search</h3>
+                        <div class="search-box">
+                            <form action="#" class="search-form clearfix" method="get">
+                                <input type="text" onblur="if (this.value == '') this.value = this.defaultValue;" onfocus="if (this.value == this.defaultValue) this.value = '';" value="Search..." name="s" class="search-text">
+                                <button type="submit" class="search-submit">
+                                    <span class="fa fa-search"></span>
+                                </button>
+                            </form>
+                            <!-- search-form -->
+                        </div>
+                    </div>
+                    <!-- widget -->
+
+                    <div class="widget kopa-ads-widget">
+                        <a href="#"><img src="images/ads/gsl.png" alt=""></a>
+                    </div>
+                    <!-- widget --> 
+                    <div class="widget kopa-ads-widget">
+                        <a href="#"><img src="images/ads/dayak.png" alt=""></a>
+                    </div>
+                    <!-- widget -->                  
+               </div>
+                <!-- sidebar -->
+
+            </div>
+            <!-- row -->
+
+    </div>
+    <!-- main-content -->
+
+    <div id="div_footer"></div> 
+    <!-- kopa-footer -->
+
+    <a href="#" class="scrollup"><span class="fa fa-chevron-up"></span></a>
+
+    
+    <script src="js/jquery-1.11.1.js"></script> 
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+    <script src="js/custom.js" charset="utf-8"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script> 
+            $(document).ready(function(){
+                $('#div_header').load("header.html");
+                $('#div_footer').load("footer.html");
+
+            });
+
+        </script>
+        <script>
+                var app = angular.module('myApp', []);
+                app.controller('myCtrl', function($scope) {
+                    $scope.clubs = [
+                        {name : "ABUJA COUNTRY CLUB"},
+                        {name : "ABUJA TENNIS CLUB"},
+                        {name : "ABIA STATE TENNIS CLUB"},
+                        {name : "ADAMAWA STATE TENNIS CLUB"},
+                        {name : "AKWA IBOM STATE TENNIS CLUB"},
+                        {name : "Lagos Lawn"}
+                    ];
+                    $scope.prepareToView = function (clubInfo) {
+                        var currentRow = $scope.clubs[$scope.clubs.indexOf(clubInfo)];
+                        alert(currentRow.name);
+
+                    }
+                });
+        </script>
+    
+</body>
+
+
+<!-- Mirrored from upsidethemes.net/demo/seramag/html/index2.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 31 Aug 2017 01:42:15 GMT -->
+</html>

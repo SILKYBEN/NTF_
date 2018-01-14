@@ -1,0 +1,1360 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="iApp" data-ng-controller="myCtrl">
+    
+<!-- Mirrored from upsidethemes.net/demo/seramag/html/404.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 31 Aug 2017 01:48:50 GMT -->
+<head>
+        <meta charset="utf-8">
+        <title>NTF Players Ranking</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.css" media="all" />
+        <link rel="stylesheet" type="text/css" href="css/font-awesome.css" media="all" />
+        <link rel="stylesheet" type="text/css" href="css/superfish.css" media="all" />
+        <link rel="stylesheet" type="text/css" href="css/megafish.css" /> 
+        <link rel="stylesheet" type="text/css" href="css/jquery.navgoco.css"/>
+        <link rel="stylesheet" type="text/css" href="css/owl.carousel.css" media="all" />
+        <link rel="stylesheet" type="text/css" href="css/owl.theme.css" media="all" />
+        <link rel="stylesheet" type="text/css" href="css/jquery.mCustomScrollbar.css" media="all" />
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" />
+        <!-- <link type="text/css" rel="stylesheet" href="assets/css/style.css">  -->
+        
+        
+        <script src="js/modernizr.custom.js"></script>
+
+        <!--[if lt IE 9]>
+            <link rel="stylesheet" href="css/ie.css" type="text/css" media="all" />
+        <![endif]-->
+
+        <!--[if IE 9]>
+            <link rel="stylesheet" href="css/ie9.css" type="text/css" media="all" />
+        <![endif]-->
+
+        <!-- Le fav and touch icons -->
+        <link rel="shortcut icon" href="img/favicon.html">
+        <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="img/apple-touch-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="img/apple-touch-icon-114x114.png">
+
+    </head>
+    
+<body class="kopa-home-page">
+
+    <div id="div_header"></div>
+    <!-- kopa-page-header -->
+
+
+    <div class="widget kopa-gallery-carousel-widget">
+        <div class="owl-carousel owl-carousel-10 owl-theme" style="opacity: 1; display: block;">
+            <div class="owl-wrapper-outer">
+                <div class="owl-wrapper" style="width: 8094px; left: 0px; display: block;">
+                    <div class="owl-item" style="width: 1349px;">
+                        <div class="item">
+                            <article class="entry-item">
+                                <div class="entry-thumb">
+                                    <a href="#"><img src="images/slider3/3.jpg" alt=""></a>
+                                    <div class="thumb-hover"></div>
+                                </div>
+                                <div class="entry-content">
+                                    <h4 class="entry-title"><a href="#"><span>NIGERIA TENNIS PLAYERS</span></a></h4>
+                                </div>
+                                <span></span>
+                            </article>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <!-- owl-carousel-10 -->
+        <div class="loading" style="display: none;">
+            <i class="fa fa-refresh fa-spin"></i>
+        </div>
+    </div>
+    <!-- main-top -->
+
+    <div class="wrapper">
+
+
+        <div class="col-md-8">
+            <div id="rrResult" class="top-score-title right-score total-reslts">
+                <h4 class="entry-title" style="font-size: 34px;line-height: 42px;margin-bottom: 10px;TEXT-ALIGN: center;">PLAYERS RANKING</h4>
+                <div class="cat-con-desc">
+                    <img src="images/cup1.jpg" alt=""><p class="news-title-right">Nigeria Tennis Federation National Ranking As At 27th November,2017</p>
+<!--                    <p class="txt-right">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                    <p class="txt-right">
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>-->
+                </div>
+                <div class="main">
+                    <div class="tabs animated-slide-2">
+                        <ul class="tab-links">
+                            <li class="active"><a href="#tab1111">Men Singles</a></li>
+                            <li><a href="#tab2222">Women Singles</a></li>
+                            <li><a href="#tab3333">Men's Double</a></li>
+                            <li><a href="#tab4444">Women's Double</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div id="tab1111" class="tab active">
+                               <table class="tab-score">
+                                    <tbody>
+                                        <tr class="top-scrore-table">
+                                            <td class="score-position">RANKING</td>
+                                            <td>FAMILY NAME</td>
+                                            <td>FIRST NAME</td>
+                                            <td>POINTS</td>
+                                            <td>PROFILES</td>
+                                        </tr>
+                                        <tr data-ng-repeat="x in mensranking">
+                                            <td data-ng-bind="$index + 1" class="score-position"></td>
+                                            <td data-ng-bind="x.B"><a href="404.html"></a></td>
+                                             <td data-ng-bind="x.C"><a href="404.html"></a></td>
+                                            <td data-ng-bind="x.D"></td>
+                                            <td><a href="404.html"><span class="newrecord">View Profile </a></span></td>
+                                        </tr>
+                                </table>
+                            </div>
+                            <div id="tab2222" class="tab">
+                                <table class="tab-score"  id="myTable">
+                                    <tbody>
+                                        <tr class="top-scrore-table">
+                                            <td class="score-position">RANKING</td>
+                                            <td>FAMILY NAME</td>
+                                            <td>FIRST NAME</td>
+                                            <td>POINTS</td>
+                                            <td>PROFILES</td>
+                                        </tr>
+                                        <tr data-ng-repeat="x in womenranking">
+                                            <td data-ng-bind="$index + 1" class="score-position"></td>
+                                            <td data-ng-bind="x.B"><a href="404.html"></a></td>
+                                             <td data-ng-bind="x.C"><a href="404.html"></a></td>
+                                            <td data-ng-bind="x.D"></td>
+                                            <td><a href="404.html"><span class="newrecord">View Profile </a></span></td>
+                                        </tr>
+                                </table>
+                            </div>
+
+                            <div id="tab3333" class="tab">
+                                <table class="tab-score">
+                                    <tbody>
+                                        <tr class="top-scrore-table">
+                                          <td class="score-position">RANKING</td>
+                                            <td>FAMILY NAME</td>
+                                            <td>FIRST NAME</td>
+                                            <td>POINTS</td>
+                                            <td>PROFILES</td>
+                                        </tr>
+                                        <tr data-ng-repeat="x in mendoublesranking">
+                                            <td data-ng-bind="$index + 1" class="score-position"></td>
+                                             <td data-ng-bind="x.B"><a href="404.html"></a></td>
+                                             <td data-ng-bind="x.C"><a href="404.html"></a></td>
+                                            <td data-ng-bind="x.D"></td>
+                                            <td><a href="404.html"><span class="newrecord">View Profile </a></span></td>
+                                        </tr>
+                                </table>
+                            </div>
+
+                            <div id="tab4444" class="tab">
+                                <table class="tab-score">
+                                    <tbody>
+                                        <tr class="top-scrore-table">
+                                            <td class="score-position">RANKING</td>
+                                            <td>PLAYER</td>
+                                            <td>POINTS</td>
+                                            <td>PROFILES</td>
+                                        </tr>
+                                        <tr data-ng-repeat="x in womendoublesranking">
+                                            <td data-ng-bind="$index + 1" class="score-position"></td>
+                                            <td data-ng-bind="x.name"><a href="404.html"></a></td>
+                                            <td data-ng-bind="x.point"></td>
+                                            <td><a href="404.html"><span class="newrecord">View Profile </a></span></td>
+                                        </tr>
+                                </table>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!--<div class="kopa-loadmore">
+                <div class="load-more-btn">
+                    <span>More</span>
+                </div>
+            </div>-->
+
+
+        </div>
+
+        <div class="sidebar widget-area-11 col-md-3">
+
+            <div class="widget widget_search style1">
+                <h3 class="widget-title style3"><span class="fa fa-search"></span>search</h3>
+                <div class="search-box">
+                    <form action="#" class="search-form clearfix" method="get">
+                        <input type="text" onblur="if (this.value == '') this.value = this.defaultValue;" onfocus="if (this.value == this.defaultValue) this.value = '';" value="Search..." name="s" class="search-text">
+                        <button type="submit" class="search-submit">
+                            <span class="fa fa-search"></span>
+                        </button>
+                    </form>
+                    <!-- search-form -->
+                </div>
+            </div>
+            <!-- widget -->
+
+            <div class="widget kopa-ads-widget">
+                <a href="#"><img src="images/ads/gsl.png" alt=""></a>
+            </div>
+
+                        <div class="widget kopa-ads-widget">
+            </div>
+            <!-- widget -->
+            <div class="widget kopa-ads-widget">
+                <a href="#"><img src="images/ads/dayak.png" alt=""></a>
+            </div>
+                                    <div class="widget kopa-ads-widget">
+            </div>
+                        <div class="widget kopa-ads-widget">
+                <a href="#"><img src="images/ads/cbnads.jpg" alt=""></a>
+            </div>
+
+
+        </div>
+        <!-- sidebar -->
+
+
+
+
+
+    </div>
+
+
+
+
+
+    <div id="div_footer"></div>
+    <!-- kopa-footer -->
+
+    <a href="#" class="scrollup"><span class="fa fa-chevron-up"></span></a>
+
+
+    <script type="text/javascript" src="assets/js/jquery-2.1.3.min.js"></script>
+    <script src="js/jquery-1.11.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <!--  <script type="text/javascript" src="assets/js/modernizr.js"></script>
+     <script type="text/javascript" src="assets/js/jquery.easing.min.js"></script>
+     <script type="text/javascript" src="assets/js/jquery.mixitup.min.js"></script>
+     <script type="text/javascript" src="assets/js/jquery.magnific-popup.min.js"></script>
+     <script type="text/javascript" src="assets/js/owl.carousel.min.js"></script> -->
+    <!-- <script async defer src="http://maps.google.com/maps/api/js?key=AIzaSyDw7NwAnx30OuhLJrX4Hay_0nvDaC9tcrg&amp;callback=initMap"></script>
+    <script type="text/javascript" src="assets/js/script.js"></script>
+    <script>
+      function initMap() {
+        var location = {lat: 40.565934, lng: -122.388118};
+        var map = new google.maps.Map(document.getElementById('map-canvas'), {
+            zoom: 14,
+            center: location,
+            scrollwheel: false,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        });
+        var marker = new google.maps.Marker({
+            position: location,
+            map: map,
+            title:"Boots4 Office"
+        });
+    }
+    </script>
+
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script> -->
+    <script src="js/custom.js" charset="utf-8"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#div_header').load("header.html");
+            $('#div_footer').load("footer.html");
+            $('#myTable').DataTable();
+        });
+
+    </script>
+    <script>
+        var app = angular.module('iApp', []);
+        app.controller('myCtrl', function ($scope) {
+            $scope.womenranking = [
+ {
+   "A": "1",
+   "B": "ADEGOKE",
+   "C": "Sarah",
+   "D": "170"
+ },
+ {
+   "A": "2",
+   "B": "SAMUEL",
+   "C": "Blessing",
+   "D": "145"
+ },
+ {
+   "A": "3",
+   "B": "AGUGBOM",
+   "C": "Christy",
+   "D": "90"
+ },
+ {
+   "A": "4",
+   "B": "EDWARDS",
+   "C": "Marylove",
+   "D": "70"
+ },
+ {
+   "A": "5",
+   "B": "ONEBAMHOIN",
+   "C": "Patience",
+   "D": "60"
+ },
+ {
+   "A": "6",
+   "B": "AIYEGBUSI",
+   "C": "Aanu",
+   "D": "50"
+ },
+ {
+   "A": "7",
+   "B": "BAMIDELE",
+   "C": "Omolayo",
+   "D": "42"
+ },
+ {
+   "A": "8",
+   "B": "DONATUS",
+   "C": "Loveth",
+   "D": "41"
+ },
+ {
+   "A": "9",
+   "B": "AKINGBADE",
+   "C": "Ronke",
+   "D": "40"
+ },
+ {
+   "A": "10",
+   "B": "OLOWU",
+   "C": "Bukola",
+   "D": "32"
+ },
+ {
+   "A": "11",
+   "B": "QUADRI",
+   "C": "Aminat",
+   "D": "31"
+ },
+ {
+   "A": "12",
+   "B": "GBADAMOSI",
+   "C": "Deborah",
+   "D": "26"
+ },
+ {
+   "A": "13",
+   "B": "ARE",
+   "C": "Bunmi",
+   "D": "26"
+ },
+ {
+   "A": "14",
+   "B": "MCLEOD",
+   "C": "Angel",
+   "D": "25"
+ },
+ {
+   "A": "15",
+   "B": "OZURUMBA",
+   "C": "Oluchi",
+   "D": "25"
+ },
+ {
+   "A": "16",
+   "B": "OSEWA",
+   "C": "Omotayo",
+   "D": "23"
+ },
+ {
+   "A": "17",
+   "B": "NWANKWO",
+   "C": "Christy",
+   "D": "22"
+ },
+ {
+   "A": "18",
+   "B": "AIRHUNWUNDE",
+   "C": "osariemen",
+   "D": "22"
+ },
+ {
+   "A": "19",
+   "B": "AKOSILE",
+   "C": "Agolarin",
+   "D": "16"
+ },
+ {
+   "A": "20",
+   "B": "DIRISU",
+   "C": "Ngozi",
+   "D": "16"
+ },
+ {
+   "A": "21",
+   "B": "ABAA",
+   "C": "Chidinma",
+   "D": "16"
+ },
+ {
+   "A": "22",
+   "B": "ORJI",
+   "C": "Colleen",
+   "D": "8"
+ },
+ {
+   "A": "23",
+   "B": "ABU",
+   "C": "Rose",
+   "D": "8"
+ },
+ {
+   "A": "24",
+   "B": "OGUNSHOLA",
+   "C": "Folashade",
+   "D": "8"
+ },
+ {
+   "A": "25",
+   "B": "OGHENEKVWE",
+   "C": "Beauty",
+   "D": "8"
+ },
+ {
+   "A": "26",
+   "B": "ODEYEMI",
+   "C": "Ramota",
+   "D": "8"
+ },
+ {
+   "A": "27",
+   "B": "UDOKWELU",
+   "C": "Stella",
+   "D": "8"
+ },
+ {
+   "A": "28",
+   "B": "GEGE",
+   "C": "Neren",
+   "D": "8"
+ },
+ {
+   "A": "29",
+   "B": "EBIJIMI",
+   "C": "Pauline",
+   "D": "7"
+ },
+ {
+   "A": "30",
+   "B": "CHRISTOPHER",
+   "C": "Faith",
+   "D": "7"
+ },
+ {
+   "A": "31",
+   "B": "NWOKOLO",
+   "C": "Amara",
+   "D": "7"
+ },
+ {
+   "A": "32",
+   "B": "ASOGBA",
+   "C": "Toyin",
+   "D": "7"
+ },
+ {
+   "A": "33",
+   "B": "POPOOLA",
+   "C": "Bukola",
+   "D": "7"
+ }
+];
+
+            $scope.womendoublesranking = [
+  { rank: '1', name: 'Agugbom Christie', point: '50' },
+  { rank: '2', name: 'Samuel Blessing', point: '50' },
+{ rank: '3', name: 'Adegoke	Sarah', point: '35' },
+{ rank: '4', name: 'Quadri	Aminat', point: '35' },
+{ rank: '5', name: 'Donatus	Loveth', point: '22.5' },
+{ rank: '6', name: 'Nwankwo Christy', point: '22.5' },
+{ rank: '7', name: 'Macleod Angel', point: '22.5' },
+{ rank: '8', name: 'Airhunwunde Osariemen', point: '22.5' },
+{ rank: '9', name: 'Abu Rose', point: '12.5' },
+{ rank: '10', name: 'Olowu Bukky', point: '12.5' },
+{ rank: '11', name: 'Onebamhoin Patience', point: '12.5' },
+{ rank: '12', name: 'Ozurumba Oluchi', point: '12.5' },
+{ rank: '13', name: 'Okoro Ann', point: '12.5' },
+{ rank: '14', name: 'Odeyemi Ramota', point: '12.5' },
+{ rank: '15', name: 'Fashanu Temitope', point: '12.5' },
+{ rank: '16', name: 'Udokwelu Stella', point: '12.5' },
+{ rank: '17', name: 'Akingbade Ronke', point: '7.5' },
+{ rank: '18', name: 'Odunoye Ademide', point: '7.5' },
+{ rank: '19', name: 'Salami Khadijat', point: '7.5' },
+{ rank: '20', name: 'Akosile Afolarin', point: '7.5' }
+            ];
+
+
+
+
+
+            $scope.mendoublesranking = [{
+   "A": "1",
+   "B": "SHEHU",
+   "C": "Lawal",
+   "D": "100"
+ },
+ {
+   "A": "2",
+   "B": "BABALOLA",
+   "C": "Abdukmumuni",
+   "D": "100"
+ },
+ {
+   "A": "3",
+   "B": "IMEH",
+   "C": "Joseph",
+   "D": "45"
+ },
+ {
+   "A": "4",
+   "B": "OWOLABI",
+   "C": "Taiwo",
+   "D": "45"
+ },
+ {
+   "A": "5",
+   "B": "SUNDAY",
+   "C": "Emmanuel",
+   "D": "45"
+ },
+ {
+   "A": "6",
+   "B": "ATSEYE",
+   "C": "Henry",
+   "D": "45"
+ },
+ {
+   "A": "7",
+   "B": "IYORUBE",
+   "C": "Joseph",
+   "D": "42.5"
+ },
+ {
+   "A": "8",
+   "B": "OTU",
+   "C": "John",
+   "D": "38.5"
+ },
+ {
+   "A": "9",
+   "B": "MOHAMMED",
+   "C": "Mohammed",
+   "D": "35"
+ },
+ {
+   "A": "10",
+   "B": "OTU",
+   "C": "Thomas",
+   "D": "35"
+ },
+ {
+   "A": "11",
+   "B": "MADUEKE",
+   "C": "Nonso",
+   "D": "30"
+ },
+ {
+   "A": "12",
+   "B": "ADAMU",
+   "C": "Sani",
+   "D": "25"
+ },
+ {
+   "A": "13",
+   "B": "BULUS",
+   "C": "Christopher",
+   "D": "25"
+ },
+ {
+   "A": "14",
+   "B": "ILOPUTA",
+   "C": "Ikechuwu",
+   "D": "20"
+ },
+ {
+   "A": "15",
+   "B": "ITODO",
+   "C": "Christopher",
+   "D": "20"
+ },
+ {
+   "A": "16",
+   "B": "ADEWALE",
+   "C": "Samson",
+   "D": "20"
+ },
+ {
+   "A": "17",
+   "B": "PAUL",
+   "C": "Christian",
+   "D": "16"
+ },
+ {
+   "A": "18",
+   "B": "PAUL",
+   "C": "Linus",
+   "D": "15"
+ },
+ {
+   "A": "19",
+   "B": "MICHAEL",
+   "C": "Michael",
+   "D": "15"
+ },
+ {
+   "A": "20",
+   "B": "MAKU",
+   "C": "Sunday",
+   "D": "12.5"
+ },
+ {
+   "A": "21",
+   "B": "IGBINOVIA",
+   "C": "Monday",
+   "D": "12.5"
+ },
+ {
+   "A": "22",
+   "B": "DA-SILVA",
+   "C": "Destiny",
+   "D": "12.5"
+ },
+ {
+   "A": "23",
+   "B": "WAZIRI SANI",
+   "C": "Ikililu",
+   "D": "12.5"
+ },
+ {
+   "A": "24",
+   "B": "IDOKO",
+   "C": "Emmanuel",
+   "D": "12.5"
+ },
+ {
+   "A": "25",
+   "B": "ALI",
+   "C": "Ibrahim",
+   "D": "12.5"
+ },
+ {
+   "A": "26",
+   "B": "OLAJIMBITI",
+   "C": "Michael",
+   "D": "11"
+ },
+ {
+   "A": "27",
+   "B": "IDRIS UMAR",
+   "C": "Aliyu",
+   "D": "11"
+ },
+ {
+   "A": "28",
+   "B": "AKINWUMI",
+   "C": "Tosin",
+   "D": "11"
+ },
+ {
+   "A": "29",
+   "B": "OGUNSHAKIN",
+   "C": "Wumi",
+   "D": "11"
+ },
+ {
+   "A": "30",
+   "B": "HASSAN",
+   "C": "Jibrin",
+   "D": "11"
+ },
+ {
+   "A": "31",
+   "B": "ALI",
+   "C": "Muktar",
+   "D": "11"
+ },
+ {
+   "A": "32",
+   "B": "ENOSOREGBE",
+   "C": "Clifford",
+   "D": "7.5"
+ },
+ {
+   "A": "33",
+   "B": "AKOR",
+   "C": "Mathew",
+   "D": "7.5"
+ },
+ {
+   "A": "34",
+   "B": "IBRAHIM",
+   "C": "Badamasi",
+   "D": "7.5"
+ },
+ {
+   "A": "35",
+   "B": "ABBA",
+   "C": "Chukwuma",
+   "D": "7.5"
+ },
+ {
+   "A": "36",
+   "B": "IKAKAH",
+   "C": "Emmanuel",
+   "D": "7.5"
+ },
+ {
+   "A": "37",
+   "B": "SAMUEL",
+   "C": "Jonah",
+   "D": "7.5"
+ },
+ {
+   "A": "38",
+   "B": "MUBARAK",
+   "C": "Salisu",
+   "D": "7.5"
+ },
+ {
+   "A": "39",
+   "B": "BASIL",
+   "C": "Jacob",
+   "D": "7.5"
+ },
+ {
+   "A": "40",
+   "B": "MICHAEL",
+   "C": "Chima",
+   "D": "7.5"
+ },
+ {
+   "A": "41",
+   "B": "ESSIEN",
+   "C": "Sunday",
+   "D": "7.5"
+ },
+ {
+   "A": "42",
+   "B": "ABAMU",
+   "C": "Martins",
+   "D": "7.5"
+ },
+ {
+   "A": "43",
+   "B": "TIMIBRA",
+   "C": "Godgift",
+   "D": "7.5"
+ },
+ {
+   "A": "44",
+   "B": "OLAWEPO",
+   "C": "Bolaji",
+   "D": "7.5"
+ },
+ {
+   "A": "45",
+   "B": "UGOH",
+   "C": "Sunday",
+   "D": "7.5"
+ },
+ {
+   "A": "46",
+   "B": "OSINACHI",
+   "C": "Ernest",
+   "D": "7.5"
+ },
+ {
+   "A": "47",
+   "B": "RILWAN",
+   "C": "Morakinyo",
+   "D": "7.5"
+ },
+ {
+   "A": "48",
+   "B": "IDRIS",
+   "C": "Ibrahim",
+   "D": "4"
+ },
+ {
+   "A": "49",
+   "B": "ANELE",
+   "C": "Albert",
+   "D": "3.5"
+ },
+ {
+   "A": "50",
+   "B": "DAUDA",
+   "C": "Ayuba",
+   "D": "3.5"
+ },
+ {
+   "A": "51",
+   "B": "ISA",
+   "C": "Ali",
+   "D": "3.5"
+ },
+ {
+   "A": "52",
+   "B": "OSEWA",
+   "C": "Michael",
+   "D": "3.5"
+ },
+ {
+   "A": "53",
+   "B": "KADIRI",
+   "C": "Kudus",
+   "D": "3.5"
+ },
+ {
+   "A": "54",
+   "B": "SAVAGE",
+   "C": "Kayode",
+   "D": "3.5"
+ },
+ {
+   "A": "55",
+   "B": "MOHAMMED",
+   "C": "Sadiq",
+   "D": "3.5"
+ },
+ {
+   "A": "56",
+   "B": "OMODARA",
+   "C": "Ayodeji",
+   "D": "3.5"
+ },
+ {
+   "A": "57",
+   "B": "UWANDU",
+   "C": "Charles",
+   "D": "3.5"
+ },
+ {
+   "A": "58",
+   "B": "OKECHUKWU",
+   "C": "Michael",
+   "D": "3.5"
+ },
+ {
+   "A": "59",
+   "B": "DIM",
+   "C": "Emmanuel",
+   "D": "3.5"
+ },
+ {
+   "A": "60",
+   "B": "ADEHI",
+   "C": "Oche",
+   "D": "3.5"
+ },
+ {
+   "A": "61",
+   "B": "ANYAKORA",
+   "C": "Nnaemeka",
+   "D": "3.5"
+ },
+ {
+   "A": "62",
+   "B": "IKECHUKWU",
+   "C": "Alozie",
+   "D": "3.5"
+ },
+ {
+   "A": "63",
+   "B": "ODEYEMI",
+   "C": "Opeyemi",
+   "D": "3.5"
+ },
+ {
+   "A": "64",
+   "B": "OYELAMI",
+   "C": "Ojo",
+   "D": "3.5"
+ },
+ {
+   "A": "65",
+   "B": "ADESHINA",
+   "C": "Ismaila",
+   "D": "3.5"
+ },
+ {
+   "A": "66",
+   "B": "SAMUEL",
+   "C": "Akagha",
+   "D": "3.5"
+ },
+ {
+   "A": "67",
+   "B": "IWUAGU",
+   "C": "Chinedu",
+   "D": "3.5"
+ },
+ {
+   "A": "68",
+   "B": "FRIDAY",
+   "C": "Gabriel",
+   "D": "3.5"
+ },
+ {
+   "A": "69",
+   "B": "ALI",
+   "C": "Muktar",
+   "D": "3.5"
+ },
+ {
+   "A": "70",
+   "B": "ADELAKUN",
+   "C": "Ebenezer",
+   "D": "3.5"
+ }
+];
+            
+            $scope.mensranking = [
+ {
+     "A": "1",
+     "B": "BABALOLA",
+     "C": "Abdulmumuni",
+     "D": "145"
+ },
+ {
+     "A": "2",
+     "B": "IMEH",
+     "C": "Joseph",
+     "D": "140"
+ },
+ {
+     "A": "3",
+     "B": "OTU",
+     "C": "Thomas",
+     "D": "125"
+ },
+ {
+     "A": "4",
+     "B": "IDOKO",
+     "C": "Emmanuel",
+     "D": "70"
+ },
+ {
+     "A": "5",
+     "B": "SUNDAY",
+     "C": "Emmanuel",
+     "D": "60"
+ },
+ {
+     "A": "6",
+     "B": "ILOPUTA",
+     "C": "Ikechukwu",
+     "D": "55"
+ },
+ {
+     "A": "7",
+     "B": "OKPARAOJI",
+     "C": "Uche",
+     "D": "54"
+ },
+ {
+     "A": "8",
+     "B": "EMMANUEL",
+     "C": "Sylvester",
+     "D": "45"
+ },
+ {
+     "A": "9",
+     "B": "BULUS",
+     "C": "Christopher",
+     "D": "41"
+ },
+ {
+     "A": "10",
+     "B": "SHEHU",
+     "C": "Lawal",
+     "D": "40"
+ },
+ {
+     "A": "11",
+     "B": "PAUL",
+     "C": "Christian",
+     "D": "33"
+ },
+ {
+     "A": "12",
+     "B": "MADUEKE",
+     "C": "Nonso",
+     "D": "32"
+ },
+ {
+     "A": "13",
+     "B": "MICHAEL",
+     "C": "Chima",
+     "D": "30"
+ },
+ {
+     "A": "14",
+     "B": "ENOSOREGBE",
+     "C": "Clifford",
+     "D": "30"
+ },
+ {
+     "A": "15",
+     "B": "MICHIAEL",
+     "C": "Michael",
+     "D": "24"
+ },
+ {
+     "A": "16",
+     "B": "IYORUBE",
+     "C": "Joseph",
+     "D": "24"
+ },
+ {
+     "A": "17",
+     "B": "TIMIBRA",
+     "C": "Godgift",
+     "D": "24"
+ },
+ {
+     "A": "18",
+     "B": "OYELAMI",
+     "C": "Ojo",
+     "D": "23"
+ },
+ {
+     "A": "19",
+     "B": "PHILIP",
+     "C": "Abayomi",
+     "D": "23"
+ },
+ {
+     "A": "20",
+     "B": "ATSEYE",
+     "C": "Henry",
+     "D": "22"
+ },
+ {
+     "A": "21",
+     "B": "ADAMU",
+     "C": "Sani",
+     "D": "22"
+ },
+ {
+     "A": "22",
+     "B": "JOHN",
+     "C": "Henry",
+     "D": "20"
+ },
+ {
+     "A": "23",
+     "B": "ABAMU",
+     "C": "Martins",
+     "D": "15"
+ },
+ {
+     "A": "24",
+     "B": "BALA",
+     "C": "Musa",
+     "D": "12"
+ },
+ {
+     "A": "25",
+     "B": "OWOLABI",
+     "C": "Taiwo",
+     "D": "12"
+ },
+ {
+     "A": "26",
+     "B": "OTU",
+     "C": "John",
+     "D": "11"
+ },
+ {
+     "A": "27",
+     "B": "IDRIS",
+     "C": "Aliyu",
+     "D": "10"
+ },
+ {
+     "A": "28",
+     "B": "DAUDA",
+     "C": "Ayuba",
+     "D": "10"
+ },
+ {
+     "A": "29",
+     "B": "HASSAN",
+     "C": "Jibrin",
+     "D": "10"
+ },
+ {
+     "A": "30",
+     "B": "MAKU",
+     "C": "Sunday",
+     "D": "8"
+ },
+ {
+     "A": "31",
+     "B": "NBANU",
+     "C": "Onyeka",
+     "D": "8"
+ },
+ {
+     "A": "32",
+     "B": "ODEYEMI",
+     "C": "Opeyemi",
+     "D": "8"
+ },
+ {
+     "A": "33",
+     "B": "IBIWOYE",
+     "C": "Niyi",
+     "D": "8"
+ },
+ {
+     "A": "34",
+     "B": "OSINACHI",
+     "C": "Ernest",
+     "D": "8"
+ },
+ {
+     "A": "35",
+     "B": "OLAWOLU",
+     "C": "Kayode",
+     "D": "8"
+ },
+ {
+     "A": "36",
+     "B": "IBRAHIM",
+     "C": "Badamasi",
+     "D": "8"
+ },
+ {
+     "A": "37",
+     "B": "SANI",
+     "C": "Yau",
+     "D": "8"
+ },
+ {
+     "A": "38",
+     "B": "MICHAEL",
+     "C": "Amos",
+     "D": "8"
+ },
+ {
+     "A": "39",
+     "B": "WAZIRI SANI",
+     "C": "Ikililu",
+     "D": "7"
+ },
+ {
+     "A": "40",
+     "B": "SAMUEL",
+     "C": "Jonah",
+     "D": "7"
+ },
+ {
+     "A": "41",
+     "B": "DA-SILVA",
+     "C": "Destiny",
+     "D": "7"
+ },
+ {
+     "A": "42",
+     "B": "OSEWA",
+     "C": "Michael",
+     "D": "7"
+ },
+ {
+     "A": "43",
+     "B": "ALAYAKI",
+     "C": "Olarewaju",
+     "D": "6"
+ },
+ {
+     "A": "44",
+     "B": "ATTAH",
+     "C": "Isaac",
+     "D": "5"
+ },
+ {
+     "A": "45",
+     "B": "EZEH",
+     "C": "Tochukwu",
+     "D": "4"
+ },
+ {
+     "A": "46",
+     "B": "MOHAMMED",
+     "C": "Mohammed",
+     "D": "4"
+ },
+ {
+     "A": "47",
+     "B": "IKAKAH",
+     "C": "Emmanuel",
+     "D": "4"
+ },
+ {
+     "A": "48",
+     "B": "ESSIEN",
+     "C": "Sunday",
+     "D": "4"
+ },
+ {
+     "A": "49",
+     "B": "SIKIRU",
+     "C": "Ismaila",
+     "D": "4"
+ },
+ {
+     "A": "50",
+     "B": "BASIL",
+     "C": "Jacob",
+     "D": "4"
+ },
+ {
+     "A": "51",
+     "B": "MORAKINYO",
+     "C": "Rilwan",
+     "D": "4"
+ },
+ {
+     "A": "52",
+     "B": "IKECHUKWU",
+     "C": "Alozie",
+     "D": "4"
+ },
+ {
+     "A": "53",
+     "B": "WALE",
+     "C": "Babalola",
+     "D": "4"
+ },
+ {
+     "A": "54",
+     "B": "IBRAHIM",
+     "C": "Wasiu",
+     "D": "4"
+ },
+ {
+     "A": "55",
+     "B": "ADESHINA",
+     "C": "Ismaila",
+     "D": "4"
+ },
+ {
+     "A": "56",
+     "B": "OGBU",
+     "C": "Richard",
+     "D": "4"
+ },
+ {
+     "A": "57",
+     "B": "EZEWOKE",
+     "C": "Ebuka",
+     "D": "4"
+ },
+ {
+     "A": "58",
+     "B": "IGBINOVIA",
+     "C": "Monday",
+     "D": "3"
+ },
+ {
+     "A": "59",
+     "B": "IWUAGU",
+     "C": "Chinedu",
+     "D": "3"
+ },
+ {
+     "A": "60",
+     "B": "SAMUEL",
+     "C": "Akagha",
+     "D": "3"
+ },
+ {
+     "A": "61",
+     "B": "ITODO",
+     "C": "Christopher",
+     "D": "3"
+ },
+ {
+     "A": "62",
+     "B": "EMMANUEL",
+     "C": "Paul",
+     "D": "3"
+ },
+ {
+     "A": "63",
+     "B": "FRIDAY",
+     "C": "Gabriel",
+     "D": "3"
+ },
+ {
+     "A": "64",
+     "B": "ANYAKORA",
+     "C": "Nnaemeka",
+     "D": "3"
+ },
+ {
+     "A": "65",
+     "B": "ALI",
+     "C": "Muktar",
+     "D": "3"
+ },
+ {
+     "A": "66",
+     "B": "STEPHEN",
+     "C": "Augustine",
+     "D": "3"
+ },
+ {
+     "A": "67",
+     "B": "JOSEPH",
+     "C": "Jolly",
+     "D": "3"
+ },
+ {
+     "A": "68",
+     "B": "OSAGIE",
+     "C": "Ramos",
+     "D": "3"
+ }
+];
+
+
+
+
+
+        });
+    </script>
+
+</body>
+
+</html>
